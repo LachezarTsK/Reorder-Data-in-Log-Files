@@ -23,7 +23,6 @@ function compareLogs(first, second) {
     if (isDigit(first.charAt(iFirst + 1)) && isLetter(second.charAt(iSecond + 1))) {
         return 1;
     }
-
     if (isDigit(first.charAt(iFirst + 1)) && isDigit(second.charAt(iSecond + 1))) {
         return 0;
     }
