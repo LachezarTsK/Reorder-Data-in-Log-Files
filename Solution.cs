@@ -6,15 +6,15 @@ public class Solution
 {
     public string[] ReorderLogFiles(string[] logs)
     {
-        string[] sortedLogs = logs.OrderBy(log => compareLogContentType(log))
-            .ThenBy(log => compareLogContentWhenItContainsOnlyLetters(log))
-            .ThenBy(log => compareLogIdentifiertWhenContentContainsOnlyLetter(log))
+        string[] sortedLogs = logs.OrderBy(log => CompareLogContentType(log))
+            .ThenBy(log => CompareLogContentWhenItContainsOnlyLetters(log))
+            .ThenBy(log => CompareLogIdentifiertWhenContentContainsOnlyLetter(log))
             .ToArray();
 
         return sortedLogs;
     }
 
-    private int compareLogContentType(string log)
+    private int CompareLogContentType(string log)
     {
         int index = log.IndexOf(' ');
 
@@ -25,7 +25,7 @@ public class Solution
         return 0;
     }
 
-    private string compareLogContentWhenItContainsOnlyLetters(string log)
+    private string CompareLogContentWhenItContainsOnlyLetters(string log)
     {
         int index = log.IndexOf(' ');
 
@@ -36,7 +36,7 @@ public class Solution
         return "";
     }
 
-    private string compareLogIdentifiertWhenContentContainsOnlyLetter(string log)
+    private string CompareLogIdentifiertWhenContentContainsOnlyLetter(string log)
     {
         int index = log.IndexOf(' ');
 
