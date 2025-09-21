@@ -27,7 +27,6 @@ function compareLogs(first: string, second: string): number {
     return compareLogIdentifiers;
 }
 
-
 function isDigit(character: string): boolean {
     return /\p{digit}/u.test(character);
 }
