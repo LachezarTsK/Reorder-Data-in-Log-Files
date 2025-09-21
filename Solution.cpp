@@ -14,7 +14,7 @@ public:
     }
 
 private:
-    static bool compareLogs(const string& first, const string& second) const {
+    static bool compareLogs(const string& first, const string& second) {
         int iFirst = first.find_first_of(' ');
         int iSecond = second.find_first_of(' ');
 
